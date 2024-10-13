@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner userinput = new Scanner(System.in);
+        System.out.println("Type in the target value");
+        int target = userinput.nextInt();
+        
+
+        int []arr = {1, 5, 1000, 5432, 54356, 666, 1124, 6, 77};
+        boolean caught = false;
+
+        for(int i =0; i<arr.length;i++){
+            if(target == arr[i]){
+                System.out.println("Target found at index:"+i);
+                caught = true;
+                break;
+
+            }
+        }
+        if(caught == false){
+            System.out.println("Target not found");
+        }
+    }
+}
